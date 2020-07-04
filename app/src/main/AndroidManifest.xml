@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.c5durango.botonpanicomercios">
+
+    <uses-feature android:name="android.hardware.camera" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_siren"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/ic_siren"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+        >
+        <service
+            android:name="com.c5durango.botonpanicomercios.Servicios.ServicioWidget"
+            android:enabled="true"
+            android:exported="true"></service>
+
+        <activity
+            android:name="com.c5durango.botonpanicomercios.PermisosActivity"
+            android:label="@string/title_activity_permisos"
+            android:theme="@style/NoActionBar"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.c5durango.botonpanicomercios.PerfilActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.c5durango.botonpanicomercios.ConfiguracionActivity"
+            android:label="@string/title_activity_configuracion"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.c5durango.botonpanicomercios.MainActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.c5durango.botonpanicomercios.RegistroActivity"
+            android:screenOrientation="portrait"/>
+
+        <receiver
+            android:name="com.c5durango.botonpanicomercios.Broadcast.BotonazoReceiver"
+            android:enabled="true"
+            android:exported="true" />
+        <receiver android:name="com.c5durango.botonpanicomercios.PanicoWidget">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/panico_widget_info" />
+        </receiver>
+
+        <service
+            android:name="com.c5durango.botonpanicomercios.Servicios.AudioService"
+            android:exported="false" />
+        <service
+            android:name="com.c5durango.botonpanicomercios.Servicios.GenerarAlertaService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name="com.c5durango.botonpanicomercios.Servicios.ServicioNotificacion"
+            android:enabled="true"
+            android:exported="true" />
+        <service android:name="com.c5durango.botonpanicomercios.Servicios.FotografiaService" />
+        <service
+            android:name="com.c5durango.botonpanicomercios.Servicios.GPSService"
+            android:enabled="true"
+            android:exported="true" />
+    </application>
+
+</manifest>

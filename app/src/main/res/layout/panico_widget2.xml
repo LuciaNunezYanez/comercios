@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#41F1F1F1"
+    android:gravity="center_horizontal|top"
+    android:padding="@dimen/widget_margin">
+
+
+    <!--<Switch
+        android:id="@+id/switchAlerta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:thumb="@drawable/thumb_selector"
+        android:track="@drawable/track_selector" />-->
+    <Button
+        android:id="@+id/boton"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="#C3D84A4A"
+        android:drawableTop="@drawable/ic_notification_siren_2"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:textColor="@android:color/white" />
+
+
+    <!-- <ImageButton
+        android:id="@+id/btnAlertarWidget"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="#1DFD6464"
+        android:ems="2"
+        android:fontFamily="sans-serif-condensed-light"
+        android:gravity="center"
+        android:src="@drawable/ic_sirena"
+        android:text="Activar #1"
+        android:textColor="#FFFF"
+        android:textSize="26sp" />-->
+
+    <!--<ImageView
+        android:id="@+id/widgetImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop" />-->
+
+</LinearLayout>

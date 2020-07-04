@@ -1,0 +1,8 @@
+<resources>
+    <dimen name="fab_margin">10dp</dimen>
+
+    <dimen name="widget_margin">8dp</dimen>
+    <dimen name="switch_padding">-1dp</dimen>
+    <dimen name="switch_radius">42dp</dimen>
+    <dimen name="switch_size">80dp</dimen>
+</resources>
